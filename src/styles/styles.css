@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    background-color: #100e1d;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.78px;
+    text-rendering: optimizeLegibility;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ---------- TodayPanel ---------- */
+
+.today-container {
+    width: 32%;
+    height: 100vh;
+    background-color: #1e213a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 42px 46px 52px;
+}
+
+.today-search-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.search-launch-btn {
+    width: 161px;
+    height: 40px;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.geo-location-btn {
+    background-color: #6e707a;
+    color: #e7e7eb;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.today-icon {
+    width: 202px;
+    height: 234px;
+}
+
+.today-temp b {
+    font-size: 144px;
+    line-height: 169px;
+    font-weight: 500;
+    color: #e7e7eb;
+    margin-top: 87px;
+}
+
+.today-temp {
+    font-size: 48px;
+    font-weight: 300;
+    color: #6e707a;
+}
+
+.today-type {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 600;
+    color: #a09fb1;
+}
+
+.today-details {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #88869d;
+}
+
+/* ---------- SearchPanel ---------- */
+
+/* ---------- Dashboard ---------- */
+
+.dashboard-container {
+    width: 68%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 42px 123px 154px;
+    color: #e7e7eb;
+}
+
+.dashboard-temp-btn-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.dashboard-temp-btn {
+    width: 161px;
+    height: 40px;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.forecast-card {
+    background-color: #1e213a;
+    width: 120px;
+    height: 177px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.fcast-card-icon {
+    width: 56.44px;
+    height: 62px;
+}
+
+.fcast-hi-lo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fcast-hi {
+    display: inline;
+}
+
+.fcast-lo {
+    display: inline;
+    color: #a09fb1;
+}
+
+.highlights-title {
+
+}
+
+.highlight-card-large {
+    background-color: #1e213a;
+}
+
+.highlight-card-small {
+    background-color: #1e213a;
+}
+
