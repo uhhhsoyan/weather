@@ -47,6 +47,7 @@ html {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .geo-location-btn {
@@ -59,6 +60,7 @@ html {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .today-icon {
@@ -111,19 +113,26 @@ html {
 
 .dashboard-temp-btn-row {
     display: flex;
-    justify-content: space-between;
-    width: 100%
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 66px;
 }
 
 .dashboard-temp-btn {
-    width: 161px;
-    height: 40px;
     background-color: #6e707a;
     color: #e7e7eb;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-left: 12px;
 }
 
 .forecast-container {
@@ -168,14 +177,76 @@ html {
 }
 
 .highlights-title {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-top: 72px;
+    margin-bottom: 32px;
+}
 
+.highlights-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 48px;
 }
 
 .highlight-card-large {
     background-color: #1e213a;
+    height: 204px;
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
 }
 
 .highlight-card-small {
     background-color: #1e213a;
+    height: 159px;
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 30px;
+}
+
+.wind-speed {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42.26px;
+    margin-bottom: 10px;
+}
+
+.wind-speed b {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75.14px;
+}
+
+.wind-direction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24.71px;
+}
+
+.wind-direction-pointer {
+    background-color: #6e707a;
+    color: #e7e7eb;
+    height: 29.5px;
+    width: 29.5px;
+    border-radius: 29.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(-150deg);
+    margin-right: 10px;
 }
 
