@@ -64,8 +64,8 @@ html {
 }
 
 .today-icon {
-    width: 202px;
-    height: 234px;
+    width: 200px;
+    height: 200px;
 }
 
 .today-temp b {
@@ -145,6 +145,7 @@ html {
 .forecast-card {
     background-color: #1e213a;
     width: 120px;
+    width: 17%;
     height: 177px;
     padding: 18px;
     display: flex;
@@ -156,7 +157,7 @@ html {
 }
 
 .fcast-card-icon {
-    width: 56.44px;
+    width: 62px;
     height: 62px;
 }
 
@@ -196,7 +197,7 @@ html {
 .highlight-card-large {
     background-color: #1e213a;
     height: 204px;
-    width: 328px;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -207,7 +208,7 @@ html {
 .highlight-card-small {
     background-color: #1e213a;
     height: 159px;
-    width: 328px;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

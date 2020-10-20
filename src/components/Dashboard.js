@@ -5,8 +5,9 @@ import HumidityCard from './HumidityCard';
 import VisibilityCard from './VisibilityCard';
 import AirPressureCard from './AirPressureCard';
 
-const Dashboard = () => {
-    
+const Dashboard = ({ forecast }) => {
+    const highlight = forecast[0];
+
     const toggleCelsius = () => {
 
     }
@@ -14,7 +15,7 @@ const Dashboard = () => {
     const toggleFahrenheit = () => {
 
     }
-    
+
     return (
         <div className="dashboard-container">
             <div className="dashboard-temp-btn-row">
@@ -22,20 +23,30 @@ const Dashboard = () => {
                 <a href="#0" className="dashboard-temp-btn" onClick={toggleFahrenheit}>&deg;F</a>
             </div>
             <div className="forecast-container">
-                <ForecastCard />
-                <ForecastCard />
-                <ForecastCard />
-                <ForecastCard />
-                <ForecastCard />
+                <ForecastCard tomorrow weather={forecast[1]} />
+                <ForecastCard tomorrow={false} weather={forecast[2]} />
+                <ForecastCard tomorrow={false} weather={forecast[3]} />
+                <ForecastCard tomorrow={false} weather={forecast[4]} />
+                <ForecastCard tomorrow={false} weather={forecast[5]} />
             </div>
             <p className="highlights-title">Today's Highlights</p>
             <div className="highlights-row">
-                <WindCard />
-                <HumidityCard />
+                <WindCard 
+                    speed={highlight.wind_speed}
+                    direction={highlight.wind_direction}
+                    direction_compass={highlight.wind_direction_compass}
+                />
+                <HumidityCard 
+                    humidity={highlight.humidity}
+                />
             </div>
             <div className="highlights-row">
-                <VisibilityCard />
-                <AirPressureCard />
+                <VisibilityCard 
+                    visibility={highlight.visibility}
+                />
+                <AirPressureCard 
+                    airPressure={highlight.air_pressure}
+                />
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://metaweather.com/location/',
+    baseURL: 'https://cors-anywhere.herokuapp.com/metaweather.com/api/location',
 })
