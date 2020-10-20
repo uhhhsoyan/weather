@@ -18,10 +18,10 @@ const DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const TodayPanel = (props) => {
-    const { location, weatherToday } = props;
+    const { location, weatherToday, setShowSearch } = props;
 
     const launchSearch = () => {
-        console.log("Launch search was clicked")
+        setShowSearch(true)
     }
 
     const launchGeoLocation = () => {
@@ -36,8 +36,8 @@ const TodayPanel = (props) => {
     return (
         <div className="today-container">
             <div className="today-search-row">
-                <a href="#0" className="search-launch-btn" onClick={launchSearch}>Search for places</a>
-                <a href="#0" className="geo-location-btn" onClick={launchGeoLocation}><i className="material-icons">gps_fixed</i></a>
+                <a href="" className="search-launch-btn" onClick={launchSearch}>Search for places</a>
+                <a href="" className="geo-location-btn" onClick={launchGeoLocation}><i className="material-icons">gps_fixed</i></a>
             </div>
             <img className="today-icon" src={require(`../assets/${ICON_MAP[weatherToday.weather_state_abbr]}`)} alt="weather icon" />
             <p className="today-temp"><b>{Math.round(weatherToday.the_temp)}</b>&deg;C</p>
