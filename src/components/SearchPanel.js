@@ -6,9 +6,8 @@ const SAMPLE_SAN = [{"title":"San Francisco","location_type":"City","woeid":2487
 const SearchPanel = ({ showSearch, setShowSearch, updateLocation }) => {
     const [term, setTerm] = useState('');
     const [debouncedTerm, setDebouncedTerm] = useState(term);
-    const [results, setResults] = useState(SAMPLE_SAN);
-
-    /*
+    const [results, setResults] = useState(null);
+    
     useEffect(() => {
         const timerId = setTimeout(() => {
             setDebouncedTerm(term);
@@ -30,16 +29,25 @@ const SearchPanel = ({ showSearch, setShowSearch, updateLocation }) => {
         };
         search()
     }, [debouncedTerm])
-    */
-
-    const renderResults = () => {
-        return results.map(result => <a className="search-list-item">{result.title}</a>)
-    }
     
+
+    const renderResults = (results) => {
+        if (!results) {
+            return null
+        }
+        return results.map(result => <a className="search-list-item" onClick={() => updateLocation(result)}>{result.title}</a>)
+    }
+
     return (
         <div className="search-panel-container" style={showSearch ? { display : 'block' } : { display: 'none' }}>
             <a className="search-exit" onClick={() => setShowSearch(false)}>X</a>
-            {renderResults()}
+            <input 
+                className="search-input"
+                placeholder="search location"
+                value={term}
+                onChange={e => setTerm(e.target.value)}
+            />
+            {renderResults(results)}
         </div>            
     )
 
